@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="PreViva poster.png" width="600"/>
+    <img src="PreViva poster.png" width="1000"/>
     <h2>📝 Personal Assist Task Management System</h2>
     <h3>With NLP & Telegram Bot Integration</h3>
 </div>

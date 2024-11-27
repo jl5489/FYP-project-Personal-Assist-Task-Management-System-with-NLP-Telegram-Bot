@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "1015831907465",
+    "firebase_url": "https://todolist-f6c6d-default-rtdb.firebaseio.com",
+    "project_id": "todolist-f6c6d",
+    "storage_bucket": "todolist-f6c6d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015831907465:android:cde241eae0476fe6664a58",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1015831907465-tb1oh25phm1mjgis1v2t23nb6cqlc8qp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgqPR4duE7DecNtPpaIKEmglwVW3cX_ts"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1015831907465-tb1oh25phm1mjgis1v2t23nb6cqlc8qp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1015831907465-56r5f784guuh67je57j6jrgbcm14ba2f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.yoshi.todark"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015831907465:android:6a7e693e2f1684f8664a58",
+        "android_client_info": {
+          "package_name": "com.yoshi.todark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1015831907465-kji87ku97l7g594o42cqttlltg37hi5k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yoshi.todark",
+            "certificate_hash": "f461ba3006ec3805c0e0d25efb9789ee0b4ebb2b"
+          }
+        },
+        {
+          "client_id": "1015831907465-tb1oh25phm1mjgis1v2t23nb6cqlc8qp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgqPR4duE7DecNtPpaIKEmglwVW3cX_ts"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1015831907465-tb1oh25phm1mjgis1v2t23nb6cqlc8qp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1015831907465-56r5f784guuh67je57j6jrgbcm14ba2f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.yoshi.todark"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

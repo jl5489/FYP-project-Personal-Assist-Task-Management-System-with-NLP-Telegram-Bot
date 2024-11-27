@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="/path/to/previvaposter.png" width="600"/>
+    <img src="previvaposter.png" width="600"/>
     <h2>📝 Personal Assist Task Management System</h2>
     <h3>With NLP & Telegram Bot Integration</h3>
 </div>

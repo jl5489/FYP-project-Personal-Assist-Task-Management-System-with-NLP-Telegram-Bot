@@ -57,12 +57,12 @@ Task management tools lack integration and NLP features, causing disjointed work
 - **Task Creation:** Create tasks directly via Telegram commands.
 
 <div align="center">
-    <img src="/path/to/home-screenshot.png" width="200"/>
-    <img src="/path/to/task-screenshot.png" width="200"/>
-    <img src="/path/to/calendar-screenshot.png" width="200"/>
-    <img src="/path/to/telegram-list-screenshot.png" width="200"/>
-    <img src="/path/to/telegram-reminder-screenshot.png" width="200"/>
-    <img src="/path/to/telegram-create-screenshot.png" width="200"/>
+    <img src="home-screenshot.png" width="200"/>
+    <img src="task-screenshot.png" width="200"/>
+    <img src="calendar-screenshot.png" width="200"/>
+    <img src="telegram-list-screenshot.png" width="200"/>
+    <img src="telegram-reminder-screenshot.png" width="200"/>
+    <img src="telegram-create-screenshot.png" width="200"/>
 </div>
 
 ---

@@ -12,11 +12,14 @@ from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 from firebase_admin import exceptions as firebase_exceptions
 from firebase_admin import credentials, firestore, auth, exceptions as firebase_exceptions
 from threading import Lock
+import os
 
 
-cred = credentials.Certificate("C:\\FlutterProject\\FYP\\Telegram\\todolist-f6c6d-firebase-adminsdk-pu7b6-971659b770.json")
+# Path to the Firebase Admin SDK service-account JSON (never commit that file).
+cred = credentials.Certificate(os.environ["FIREBASE_CREDENTIALS"])
 firebase_admin.initialize_app(cred)
-TOKEN = "7877361330:AAHSV-3tn2lVTpbmMYCClkDGY9MbwdS2hAM"
+# Bot token from @BotFather, read from the environment (never commit it).
+TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 bot = telebot.TeleBot(TOKEN)
 nlp = spacy.load("en_core_web_sm")
 user_states = {}

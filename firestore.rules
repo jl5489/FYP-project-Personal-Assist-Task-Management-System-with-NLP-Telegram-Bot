@@ -3,27 +3,46 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // Allow users to access their own user document
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    // Existing doc belongs to the caller (read, update, delete).
+    function ownsExisting() {
+      return signedIn() && resource.data.uid == request.auth.uid;
+    }
+
+    // New or updated doc still belongs to the caller (no handing docs to others).
+    function ownsIncoming() {
+      return signedIn() && request.resource.data.uid == request.auth.uid;
+    }
+
+    // Users can access only their own user document
     match /users/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
+      allow read, write: if signedIn() && request.auth.uid == userId;
     }
 
-    // Allow users to access their own tasks
+    // Tasks, todos and notifications carry a 'uid' field set by the app.
+    // List queries must filter with where('uid', isEqualTo: uid), which the app does.
     match /tasks/{taskId} {
-      allow read, write: if true;
+      allow read, delete: if ownsExisting();
+      allow create: if ownsIncoming();
+      allow update: if ownsExisting() && ownsIncoming();
     }
 
-    // Allow users to access their own todos
     match /todos/{todoId} {
-      allow read, write: if true;
+      allow read, delete: if ownsExisting();
+      allow create: if ownsIncoming();
+      allow update: if ownsExisting() && ownsIncoming();
     }
 
-    // Allow users to access their own notifications
     match /notifications/{notificationId} {
-      allow read, write: if request.auth != null && request.auth.uid == resource.data.uid;
+      allow read, delete: if ownsExisting();
+      allow create: if ownsIncoming();
+      allow update: if ownsExisting() && ownsIncoming();
     }
 
-    // Deny all other access
+    // Deny all other access. (The Telegram bot uses the Admin SDK, which bypasses these rules.)
     match /{document=**} {
       allow read, write: if false;
     }

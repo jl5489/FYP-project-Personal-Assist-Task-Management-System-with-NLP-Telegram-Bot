@@ -82,3 +82,15 @@ Teoh Jia Liang
 ---
 
 
+
+## Running the Telegram bot
+
+The bot reads its secrets from environment variables, so nothing secret lives in the code:
+
+```bash
+export TELEGRAM_BOT_TOKEN="<token from @BotFather>"
+export FIREBASE_CREDENTIALS="/path/to/firebase-adminsdk.json"
+python Telegram/task_manager.py
+```
+
+Deploy the Firestore rules with `firebase deploy --only firestore:rules`.
